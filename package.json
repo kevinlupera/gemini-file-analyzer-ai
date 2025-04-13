@@ -1,0 +1,36 @@
+{
+  "name": "gemini-file-analyzer-ai",
+  "version": "1.0.0",
+  "description": "A Node.js library for analyzing and extracting information from files using Google's Gemini API.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check --write .",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "keywords": ["gemini", "ocr", "ai", "image-analysis", "google-ai", "pdf", "file-analysis"],
+  "author": "Kevin Lupera <kevin.lupera@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "0.24.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^20.11.19",
+    "dotenv": "^16.4.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "typescript": "^5.3.3"
+  },
+  "files": ["dist", "README.md"],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "lint-staged": {
+    "*.{js,ts}": ["biome format --write", "biome lint", "biome check --write"]
+  }
+}
