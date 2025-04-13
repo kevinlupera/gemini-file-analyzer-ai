@@ -32,5 +32,12 @@
   },
   "lint-staged": {
     "*.{js,ts}": ["biome format --write", "biome lint", "biome check --write"]
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevinlupera/gemini-file-analyzer-ai.git"
   }
 }
